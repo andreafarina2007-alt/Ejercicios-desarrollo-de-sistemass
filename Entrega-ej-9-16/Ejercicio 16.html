@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 16 - Información Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+        }
+        form {
+            width: 450px; /* Ancho fijo para que se vea como la ventana de la imagen */
+        }
+        fieldset {
+            border: 1px solid #aaa;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fdfdfd;
+        }
+        legend {
+            font-weight: bold;
+            color: #444;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 3px;
+        }
+        
+        /* Estilo específico para el textarea (caja grande de texto) */
+        textarea {
+            width: 95%;
+            height: 80px;
+            resize: vertical; /* Permite al usuario estirar la caja si quiere */
+            padding: 3px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para la sección de Datos Económicos */
+        .fila-precio {
+            margin-top: 10px;
+        }
+        .fila-precio label {
+            display: inline; /* Para que 'Precio' e 'Impuestos' estén en línea */
+            margin-right: 5px;
+        }
+        .precio-input {
+            width: 60px !important; /* Forzamos un ancho pequeño */
+            text-align: right;
+            margin-right: 20px;
+        }
+        
+        /* Estilo para los radio buttons de promoción */
+        .radio-group label {
+            font-weight: normal; /* El texto de las opciones no va en negrita */
+            display: inline;
+            vertical-align: middle;
+        }
+        .radio-group input {
+            vertical-align: middle;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Información sobre el producto</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Datos básicos</legend>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion"></textarea>
+
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+
+            <div style="margin-top: 15px;">
+                <input type="checkbox" name="contador" id="contador">
+                <label for="contador" style="display:inline; font-weight:normal;">Añadir contador de visitas</label>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Datos económicos</legend>
+
+            <div class="fila-precio">
+                <label for="precio">Precio</label>
+                <input type="text" name="precio" id="precio" class="precio-input"> €
+
+                <label for="impuestos">Impuestos</label>
+                <select name="impuestos" id="impuestos">
+                    <option value="4">4%</option>
+                    <option value="7">7%</option>
+                    <option value="16">16%</option>
+                    <option value="25">25%</option>
+                </select>
+            </div>
+
+            <label>Promoción</label>
+            <div class="radio-group">
+                <input type="radio" name="promocion" id="ninguno" value="ninguno" checked>
+                <label for="ninguno">Ninguno</label><br>
+
+                <input type="radio" name="promocion" id="transporte" value="transporte">
+                <label for="transporte">Transporte gratuito</label><br>
+
+                <input type="radio" name="promocion" id="descuento" value="descuento">
+                <label for="descuento">Descuento 5%</label>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

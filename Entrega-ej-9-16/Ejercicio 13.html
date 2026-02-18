@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio - Comparativa MP3</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        /* Estilo para los encabezados */
+        th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        /* Estilo para simular los puntos de colores */
+        .dot { font-size: 20px; }
+        .white { color: #ddd; text-shadow: 0 0 1px #000; } /* Círculo blanco con borde */
+        .black { color: black; }
+        .green { color: green; }
+        .blue { color: blue; }
+        .pink { color: hotpink; }
+        
+        /* Imágenes simuladas */
+        img { width: 50px; height: auto; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Comparativa de reproductores MP3</h1>
+
+    <table summary="Tabla comparativa de características técnicas entre los modelos MP3 mini y MP3 grande, detallando capacidad, colores, pantalla y tiempo de carga.">
+        
+        <caption>Tabla comparativa de las características técnicas de los reproductores MP3</caption>
+
+        <thead>
+            <tr>
+                <td></td>
+                
+                <th colspan="3" scope="colgroup">
+                    <img src="../imagenes/mp3 mini.png" alt="Imagen MP3 Mini">
+                    MP3 mini
+                </th>
+                
+                <th colspan="2" scope="colgroup">
+                    <img src="../imagenes/mp3 grande.png" alt="Imagen MP3 Grande">
+                    MP3 grande
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row" abbr="Capacidad">Capacidad de<br>almacenamiento</th>
+                
+                <td>4GB<br><small>(1.000 canciones)</small></td>
+                <td>8GB<br><small>(2.000 canciones)</small></td>
+                <td>16GB<br><small>(4.000 canciones)</small></td>
+                
+                <td>30GB<br><small>(7.500 canciones)</small></td>
+                <td>80GB<br><small>(20.000 canciones)</small></td>
+            </tr>
+
+            <tr>
+                <th scope="row">Colores</th>
+                
+                <td><span class="dot white">●</span></td>
+                
+                <td>
+                    <span class="dot black">●</span>
+                    <span class="dot green">●</span>
+                    <span class="dot blue">●</span><br>
+                    <span class="dot pink">●</span>
+                </td>
+                
+                <td><span class="dot black">●</span></td>
+                
+                <td colspan="2">
+                    <span class="dot white">●</span>
+                    <span class="dot black">●</span>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Pantalla</th>
+                
+                <td colspan="3">LCD de 3 cm (diagonal) con retroiluminación</td>
+                
+                <td colspan="2">LCD de 6 cm (diagonal) con retroiluminación</td>
+            </tr>
+
+            <tr>
+                <th scope="row" rowspan="2" abbr="Carga">Tiempo de<br>carga</th>
+                
+                <td rowspan="2" colspan="3">Unas 3 horas</td>
+                
+                <td colspan="2">Unas 4 horas</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

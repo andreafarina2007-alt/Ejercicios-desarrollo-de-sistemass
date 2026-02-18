@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15 - Rellena tu CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        /* Estilo para el recuadro que agrupa los campos */
+        fieldset {
+            width: 400px;
+            border: 1px solid #aaa;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        /* Estilo para el título del recuadro */
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+        h2 {
+            margin: 0;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block; /* Para que cada etiqueta esté en su propia línea */
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        /* Ajuste para que los inputs de fecha se vean pequeños como en la imagen */
+        input.dia { width: 30px; }
+        input.anio { width: 60px; }
+        
+        /* Estilo para la lista múltiple */
+        select[multiple] {
+            width: 100%;
+            border: 1px solid #7f9db9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Rellena tu CV</h2>
+
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="provincia">Provincia</label>
+            <select name="provincia" id="provincia">
+                <option value="" selected>- selecciona -</option>
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="valencia">Valencia</option>
+            </select>
+
+            <label>Fecha de nacimiento</label>
+            <div>
+                <input type="text" name="dia" class="dia" maxlength="2">
+                de
+                <select name="mes">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    </select>
+                de
+                <input type="text" name="anio" class="anio" maxlength="4">
+            </div>
+
+            <label for="interes">Temas de interés</label>
+            <select name="interes" id="interes" multiple size="5">
+                <option value="bd">Administración de bases de datos</option>
+                <option value="analisis">Análisis y programación</option>
+                <option value="arquitectura">Arquitectura</option>
+                <option value="calidad">Calidad</option>
+                <option value="erp">ERP, CRM, Business Intelligence</option>
+                <option value="gestion">Gestión de Proyectos</option>
+            </select>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rellena tu CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            width: 400px;
+            border: 1px solid #ccc; /* Borde azulado tipo ventana */
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .campo {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block; /* Para que la etiqueta quede encima del input */
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        /* Estilos específicos para que se parezca a la imagen */
+        input[type="text"], input[type="password"] {
+            width: 95%;
+            padding: 5px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+        }
+        input[type="file"] {
+            margin-top: 5px;
+        }
+        .botones {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/php/insertar_cv.php" method="post" enctype="multipart/form-data">
+        
+        <h2>Rellena tu CV</h2>
+
+        <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" maxlength="30">
+        </div>
+
+        <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" maxlength="80">
+        </div>
+
+        <div class="campo">
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" id="pass" maxlength="10">
+        </div>
+
+        <div class="campo">
+            <label for="dni">DNI</label>
+            <input type="text" name="dni" id="dni" maxlength="9" size="10">
+        </div>
+
+        <div class="campo">
+            <label>Sexo</label>
+            <input type="radio" name="sexo" id="hombre" value="hombre" checked> 
+            <label for="hombre" style="display:inline; font-weight:normal;">Hombre</label>
+            <br>
+            <input type="radio" name="sexo" id="mujer" value="mujer"> 
+            <label for="mujer" style="display:inline; font-weight:normal;">Mujer</label>
+        </div>
+
+        <div class="campo">
+            <label for="foto" style="display:inline;">Incluir mi foto</label>
+            <input type="file" name="foto" id="foto">
+        </div>
+
+        <div class="campo">
+            <input type="checkbox" name="suscripcion" id="suscripcion" checked>
+            <label for="suscripcion" style="display:inline; font-weight:bold;">Suscribirme al boletín de novedades</label>
+        </div>
+
+        <div class="botones">
+            <input type="submit" value="Guardar cambios">
+            <input type="reset" value="Borrar los datos introducidos">
+        </div>
+
+    </form>
+
+</body>
+</html>

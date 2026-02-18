@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12 - Tabla de Búsqueda</title>
+    <style>
+        /* Un poco de CSS básico para que se vea parecido a la imagen */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            text-align: center;
+        }
+        td.imagen {
+            text-align: center;
+            width: 150px;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+        h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        a {
+            text-decoration: underline;
+            color: blue;
+        }
+        .precio-anterior {
+            text-decoration: line-through;
+            color: #555;
+            margin-left: 5px;
+        }
+        .precio-nuevo {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Resultado de la búsqueda</h1>
+
+    <table summary="Tabla que muestra los resultados de la búsqueda de productos electrónicos con su imagen, descripción y precio.">
+        
+        <caption>Resultado de la búsqueda</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Datos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+            <tr>
+                <td class="imagen">
+                    <img src="../imagenes/laptop.png" alt="Ordenador Portátil abierto">
+                </td>
+                <td>
+                    <h3><a href="#">Portátil - 3 GHz - 4 GB RAM</a></h3>
+                    <p>
+                        <a href="#">Comprar:</a>
+                        <span class="precio-anterior">2.990 €</span>
+                        <span class="precio-nuevo">2.599 €</span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="imagen">
+                    <img src="../imagenes/videocamara.png" alt="Videocámara digital gris">
+                </td>
+                <td>
+                    <h3><a href="#">Videocámara - Alta definición 1080p - 60 GB</a></h3>
+                    <p>
+                        <a href="#">Comprar:</a>
+                        <span class="precio-anterior">1.099 €</span>
+                        <span class="precio-nuevo">999 €</span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="imagen">
+                    <img src="../imagenes/tv.jpg" alt="Televisor de pantalla plana">
+                </td>
+                <td>
+                    <h3><a href="#">Televisor - 46" - Full HD</a></h3>
+                    <p>
+                        <a href="#">Comprar:</a>
+                        <span class="precio-anterior">1.999 €</span>
+                        <span class="precio-nuevo">1.799 €</span>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="imagen">
+                    <img src="../imagenes/telfono movil.png" alt="Teléfono móvil con teclado numérico">
+                </td>
+                <td>
+                    <h3><a href="#">Móvil - 3G - Wi-Fi - 8 GB</a></h3>
+                    <p>
+                        <a href="#">Comprar:</a>
+                        <span class="precio-anterior">399 €</span>
+                        <span class="precio-nuevo">349 €</span>
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
